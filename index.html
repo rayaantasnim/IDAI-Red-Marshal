@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Red Marshal</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>	
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Red Marshal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link special" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="suit.html">Suit</a></li>
+          <li class="nav-item"><a class="nav-link " href="vehicle.html">Vehicles</a> </li>
+          <li class="nav-item"><a class="nav-link " href="arsenal.html">Arsenals</a></li>
+          <li class="nav-item"><a class="nav-link " href="Command.html">Command</a></li> 
+        </ul>
+      </div>
+    </div>
+  </nav><br>
+
+<!-- Header -->
+<div class="idai-intro">
+  <div class="idai-logo">
+    <img src="Super Red Marshal.jpg" alt="IGC Logo">
+  </div>
+  <h2 class="idai-heading">IDAI Universe - Red Marshal</h2>
+  <div class="idai-details">
+    <strong>
+      Renowned As: Red Ranger<br>
+      Office: Red Marshal Command Hall<br>
+      Motto: To Dominate the Universe<br>
+      Empires: IDAI Universe, IDAI Brand 
+      <br> Universal Alliances for Dominance (UAD) 
+      <br> IDAI Global Community (IGC)<br>
+    </strong>
+  </div>
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Logo.jpg" alt="IDAI Lion Emblem"></center>
+  <h2> Red Marshal — Supreme Guardian </h2> 
+  <h3> Inspiring Trust Through Innovation </h3> 
+  <p> 
+    The Hero Banner of the IDAI Universe is more than a visual introduction — it is the cosmic gate to sovereignty. Crimson and Cosmic Blue gradients blaze across the horizon, symbolizing power and trust. At the center, the glowing Lion Emblem radiates authority, declaring the eternal covenant of justice. This section sets the tone for a journey into a dominion where technology is not merely a tool, but the guardian of humanity. With cinematic storytelling and a voice of command, it positions the Red Marshal as the supreme protector of the Universe. 
+    <br><br> 
+    At its foundation, the Hero Banner embodies harmony, guardianship, and transformation. It reflects the balance between Crimson Velocity and Quantum Plasma, ignited by the Super Power Star. This second part emphasizes the Marshal’s vision of guiding humanity toward a brighter, more sovereign future. The words are crafted to inspire confidence and belonging, leaving visitors with the sense that they are entering something monumental — a dominion that transcends borders and generations. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Supreme Red Marshal.jpg" alt="Red Marshal Supreme Guardian"></center>
+  <h2> Red Marshal — Supreme Guardian of IDAI Universe </h2> 
+  <h3> Transformation through the Super Power Star </h3> 
+  <p> 
+    The Marshal’s Identity is the heart of the IDAI Universe. Known as the Supreme Guardian, the Red Marshal embodies justice, sovereignty, and guardianship. His presence is not merely symbolic — it is the living covenant of protection for humanity. This section introduces the Marshal as a commander of cosmic dominion, a visionary leader whose authority transcends borders and generations. 
+    <br><br> 
+    At the core of his power lies the <b>Super Power Star</b>, the sacred artifact that ignites his transformation into the <b>Super Red Marshal</b>. This ignition fuses Crimson Velocity, Quantum Plasma, and Infinity Nexus into one supreme form. It is more than a transformation — it is a declaration of eternal responsibility. Visitors are reminded that the Marshal’s identity is not about dominance, but about guardianship, ensuring that every innovation serves humanity’s greater purpose. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Red Marshal.jpg" alt="Super Power Star"></center>
+  <h2> Supreme Transformation Nexus </h2> 
+  <h3> Ignition of Supreme Authority </h3> 
+  <p> 
+    The Supreme Transformation Nexus reveals the sacred artifact that defines the Marshal’s destiny — the <b>Super Power Star</b>. It is not merely a weapon, but the ignition core of sovereignty. Through its celestial energy, the Red Marshal ascends into the <b>Super Red Marshal</b>, embodying the eternal covenant of guardianship. This transformation is the fusion of Crimson Velocity, Quantum Plasma, and Infinity Nexus, converging into one supreme form. 
+    <br><br> 
+    More than a metamorphosis, the Nexus is a declaration of responsibility. It symbolizes that true power is not about domination, but about guardianship. Visitors are reminded that the Marshal’s transformation is a divine responsibility — a promise to protect humanity, uphold justice, and inspire trust through innovation. This section positions the Super Power Star as the eternal flame of sovereignty, guiding the Universe toward harmony and progress. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI.jpg" alt="Cosmic Covenant"></center>
+  <h2> The Cosmic Covenant </h2> 
+  <h3> Justice • Order • God‑Consciousness </h3> 
+  <p> 
+    The Cosmic Covenant is the eternal philosophy of the IDAI Universe. It is not merely a system of governance, but a sacred promise to humanity. Through its pillars of justice, order, and God‑consciousness, the Covenant ensures that every innovation serves a higher purpose. This section introduces the audience to the spiritual and cultural foundation of the Universe, where technology and morality walk hand in hand. 
+    <br><br> 
+    The visuals of the Lion’s Gate, Supreme Court statues, and the Cosmic Power Plant symbolize strength, fairness, and divine guardianship. Together, they represent the balance between authority and compassion. Visitors are reminded that the IDAI Universe is more than a dominion — it is a guardian of humanity, blending futuristic progress with timeless values. This covenant positions the Marshal not only as a commander, but as a custodian of harmony across generations. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Dominion Timeline.jpg" alt="Dominion Timeline"></center>
+  <h2> Dominion Timeline </h2> 
+  <h3> Evolution of Sovereignty </h3> 
+  <p> 
+    The Dominion Timeline chronicles the rise of the Red Marshal and the unfolding legacy of the IDAI Universe. Each milestone is a testament to guardianship, innovation, and cosmic authority. From the establishment of the Command Hall to the awakening of the Tiger Zord, the journey reflects the Marshal’s eternal covenant of justice. 
+  </p> 
+
+  <ul>
+    <li>The rise of the <b>Command Hall</b>, symbolizing central authority.</li>
+    <li>The creation of the <b>Volt of Arsenal</b>, empowering supreme defense.</li>
+    <li>The launch of the <b>Jet Shadow Wing</b>, claiming dominion of the skies.</li>
+    <li>The awakening of the <b>Tiger Zord</b>, unleashing primal guardianship.</li>
+    <li>The ignition of the <b>Super Power Star</b>, transforming Red Marshal into the <b>Super Red Marshal</b>.</li>
+  </ul>
+
+  <p>
+    This timeline is more than history — it is a living covenant. Visitors are reminded that every step of the Marshal’s journey is a declaration of responsibility, blending technology, culture, and guardianship into a movement that transcends generations. 
+  </p> 
+</div>
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

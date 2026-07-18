@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Red Marshal Special Arsenals</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>	
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Red Marshal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="suit.html">Suit</a></li>
+          <li class="nav-item"><a class="nav-link " href="vehicle.html">Vehicles</a> </li>
+          <li class="nav-item"><a class="nav-link special" href="arsenal.html">Arsenals</a></li>
+          <li class="nav-item"><a class="nav-link " href="Command.html">Command</a></li> 
+        </ul>
+      </div>
+    </div>
+  </nav><br>
+
+<div class="section"> 
+  <center><img src="The Volt of Arsenal.jpg" alt="Vault of Arsenals"></center>
+  <h2> The Vault of Arsenals </h2> 
+  <h3> Sub-Zero Dominion Armory </h3> 
+  <p> 
+    Deep within the fortified heart of the Red Marshal Command Hall lies the Vault of Arsenals — a subterranean sanctum where cosmic power converges with absolute order. Its blast-resistant titanium bulkheads shimmer under the spectral glow of the Morphex grid, channeling energy from Proxima Centauri into every corridor. The stadium-like tiers rise in solemn symmetry, each weapon resting upon levitating docks that hum with violet resonance. From the raised command balcony, the Marshal oversees this frozen cathedral of firepower, where silence itself feels charged with destiny.  
+  </p> 
+  <p> 
+    Within the central core, a rotating column of transparent armor houses the Marshal’s signature weapons, each glowing like constellations trapped in crystal. Magnetic tracks glide across the decks, carrying rifles, pistols, and plasma blades with the precision of celestial choreography. Automated retrieval systems respond in seconds, delivering armaments to the arming platform as if summoned by divine decree. The Vault is not merely storage — it is a living covenant of readiness, a cosmic logistics engine where every weapon is calibrated, charged, and consecrated to the Marshal’s eternal guardianship.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Combat Shotgun.jpg" alt="Combat Shotgun"></center>
+  <h2> Combat Shotgun </h2> 
+  <h3> Heavy-Duty Plasma Breach Weapon </h3> 
+  <p> 
+    Forged in the crucible of dominion, the Combat Shotgun is more than a tactical firearm — it is a cosmic instrument of sovereignty. Its heavy-duty chassis, sculpted from matte-black titanium-carbon alloy, channels raw energy through exposed plasma coils that glow with violet fire. As the weapon is raised, the Morphex grid of Proxima Centauri seems to pulse within its barrel, igniting each round with celestial fury. This is not simply a shotgun; it is the Marshal’s breach hammer, engineered to shatter barriers and command respect in close-to-medium quarters.  
+  </p> 
+  <p> 
+    When fired, kinetic rounds are enveloped in a sheath of plasma, transforming ordinary projectiles into blazing comets of destruction. The dual-bore barrel, stabilized by magnetic rings, ensures precision even amidst chaos, while the holographic reflex sight projects real-time telemetry like a guardian star chart. Every shot is a declaration of guardianship — a fusion of thermal devastation and kinetic impact that leaves no doubt of the Marshal’s supremacy. The Combat Shotgun is not just a weapon; it is a covenant of power, a reminder that cosmic authority flows through the hands of the Red Marshal.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Vanishing Gun.jpg" alt="Vanishing Gun – Teleportation System"></center>
+  <h2> Vanishing Gun – Teleportation System </h2> 
+  <h3> Displacement Cannon of the Black Delta Force </h3> 
+  <p> 
+    The Vanishing Gun is not a weapon of destruction, but of dominion. Forged with industrial-grade bronze and carbon-composite armor, it stands as a colossal displacement cannon engineered by the Black Delta Force. At its core lies the Quantum Translocation Engine, a heart of cosmic machinery that bends dimensional space into obedience. When activated, the muzzle’s glowing cyan ring hums with the resonance of Proxima Centauri, channeling celestial currents through high-voltage stabilization brackets. This is not a firearm — it is a wormhole generator, a covenant of control that redefines the battlefield by removing adversaries from existence without bloodshed.  
+  </p> 
+  <p> 
+    Each activation is a ritual of precision. The bio-scanner locks onto the molecular signature of its target, stabilizing atomic bonds against the chaos of transit. The operator, standing before the neon-purple holographic Destiny Panel, selects coordinates across the infinite grid of space. Then, with a single pull of the trigger, the Vanishing Gun collapses the fabric of reality around its mark, vanishing them into the void and rematerializing them at the chosen destination. It is the Marshal’s doctrine embodied — a weapon that does not kill, but commands destiny, ensuring that justice is delivered through displacement, not destruction.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Quantum Plasma Rivolver.jpg" alt="Quantum Plasma Rivolver"></center>
+  <h2> Quantum Plasma Rivolver </h2> 
+  <h3> Precision Sidearm of the Command Hall </h3> 
+  <p> 
+    The Quantum Plasma Rivolver is the Marshal’s ceremonial sidearm, a fusion of tradition and cosmic engineering. Its gunmetal frame, accented with polished gold trims, gleams like a relic forged in the fires of Proxima Centauri. Within its electromagnetic cylinder, six plasma cells glow with deep violet and metallic blue energy, each chamber a miniature star waiting to be unleashed. This revolver is not a mere weapon — it is a guardian’s oath, balancing the heritage of a classic cylinder handgun with the transcendence of plasma technology.  
+  </p> 
+  <p> 
+    When fired, the cylinder does not release bullets, but channels ultra‑dense plasma charges into the barrel, compressing them into high‑velocity bolts of radiant destruction. The dual‑rail barrel stabilizes the surge, while cyan cooling lanes shimmer like cosmic veins, eliminating recoil entirely. Each shot is a comet streaking across the battlefield, a declaration of sovereignty carried in the Marshal’s hand. The Quantum Plasma Rivolver is more than defense — it is destiny embodied, a sidearm that transforms energy into authority and ensures that the Command Hall remains eternally protected.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Plasma Power Sword.png" alt="Plasma Power Sword"></center>
+  <h2> Plasma Power Sword </h2> 
+  <h3> Crimson Blade of Absolute Dominion </h3> 
+  <p> 
+    The Plasma Power Sword is the supreme melee armament of the Command Hall — a legendary broadsword forged to channel raw, unstable plasma through a physical matrix. Its hilt of dark titanium and gold alloy spreads into wing‑like guards, framing a crimson gemstone that glows like the heart of a dying star. When drawn, the blade erupts into a radiant lattice of superheated plasma, vibrating at molecular speeds and shimmering with lightning arcs. This is not a weapon of steel, but of cosmic fire, a blade that cleaves through armor and shielding as though they were shadows before dawn.  
+  </p> 
+  <p> 
+    Within its pommel lies a micro‑fusion generator, pumping hyper‑dense plasma into the blade core until it blazes with crimson fury. Each strike is more than a cut — it is a subatomic detonation, vaporizing matter in an instant and leaving trails of incandescent energy across the battlefield. To wield the Plasma Power Sword is to hold the authority of the stars themselves, a covenant of destruction and guardianship. It is the Marshal’s ultimate symbol of sovereignty, a blade that transforms combat into cosmic judgment.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Ray Gun Attached With Hand.jpg" alt="Ray Gun Attached With Hand"></center>
+  <h2> Ray Gun Attached With Hand </h2> 
+  <h3> IDAI Integrated Ray System </h3> 
+  <p> 
+    The Ray Gun Attached With Hand is not a weapon you carry — it is a weapon you become. Forged as a cybernetic gauntlet, its multi‑layered carbon‑titanium scales shift seamlessly with the Marshal’s movements, turning the forearm into a living conduit of destruction. At the wrist, a glowing focal lens pulses with cyan energy, encircled by induction rings that hum like miniature galaxies. This is the IDAI Integrated Ray System, a direct‑link armament bonded to tactical armor, designed to erase the boundary between flesh and firepower. Wherever the Marshal’s fist points, cosmic precision follows.  
+  </p> 
+  <p> 
+    Energy flows directly from the tactical suit’s power plant, coursing down cyan conduits until it converges at the lens. With each pulse, the weapon unleashes ultra‑concentrated streams of thermal energy, striking with the immediacy of thought itself. A floating holographic HUD hovers above the wrist, glowing blue with real‑time telemetry — ENERGY 92%, MODE: PULSE — a divine interface between man and machine. The Ray Gun is not simply an extension of the arm; it is the Marshal’s will incarnate, a covenant of speed and sovereignty where every gesture becomes a beam of judgment.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Tranquilizer Gun.jpg" alt="Tranquilizer Gun"></center>
+  <h2> Tranquilizer Gun </h2> 
+  <h3> IDAI Sub-Lethal Capture System </h3> 
+  <p> 
+    The Tranquilizer Gun is the Marshal’s covenant of mercy — a weapon forged not to kill, but to command obedience through compassion. Its matte-black composite frame glimmers with gold accents, bearing the insignia of IDAI like a seal of guardianship. At its core rests a glowing turquoise chamber of Neuro-Sleep Darts, each shimmering like bottled starlight. When raised, violet induction rings hum with restrained power, supercharging every dart with chemical precision. This is not destruction, but discipline — a sidearm designed for capture, extraction, and control, ensuring that even chaos bends to the Marshal’s will.  
+  </p> 
+  <p> 
+    Upon firing, the dart pierces armor and undersuits with surgical accuracy, releasing a neuroparalytic agent that silences resistance without permanent harm. The dosage, calibrated through a holographic interface, can render a target senseless for six hours, a pause in their defiance rather than an end to their existence. The glowing status indicator shifts between SAFE and ACTIVE, reminding all who witness it that the Marshal’s strength is tempered by restraint. The Tranquilizer Gun is more than a weapon — it is a promise of guardianship, proof that sovereignty is not only measured in destruction, but in the power to protect with humanity.  
+  </p> 
+</div>
+
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

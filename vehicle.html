@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Red Marshal Vehicles</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+
+  </style>	
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Red Marshal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="suit.html">Suit</a></li>
+          <li class="nav-item"><a class="nav-link special" href="vehicle.html">Vehicles</a> </li>
+          <li class="nav-item"><a class="nav-link " href="arsenal.html">Arsenals</a></li>
+          <li class="nav-item"><a class="nav-link " href="Command.html">Command</a></li> 
+        </ul>
+      </div>
+    </div>
+  </nav><br>
+
+<div class="section"> 
+  <center><img src="Red Marshal Fleet.jpg" alt="Red Marshal Fleet"></center>
+  <h2> Red Marshal Fleet </h2> 
+  <h3> Covenant of Sovereignty </h3> 
+  <p> 
+    The Red Marshal Fleet is the living backbone of the IDAI Universe — a covenant of machines forged for guardianship across land, sea, air, and orbital horizons. From armored SUVs and tactical rovers to dreadnought cruisers, stealth jets, and sentient Zords, each vehicle embodies resilience, vigilance, and dominion. Together, they form a unified force that ensures no frontier lies beyond the Marshal’s reach.  
+  </p> 
+  <p> 
+    Crimson Strider, Desert Revenant, Galaxy One through Four, Off‑Road Rover, Green Phantom, Swarm Keeper, Shadow Wing Jet, Tiger Zord, and Wraith Urban — all stand as sovereign guardians. Each machine is not merely transport, but a symbol of justice and strength, transforming highways, oceans, skies, and battlefields into pathways of sovereignty. The Fleet is more than engineering — it is the Marshal’s covenant of guardianship, a living testament to order and dominion.  
+  </p> 
+</div>
+
+
+<div class="section"> 
+  <center><img src="Helicopter - IDAI Phantom Serpent.jpg" alt="IDAI Phantom Serpent"></center>
+  <h2> IDAI Phantom Serpent </h2> 
+  <h3> Silent Fang of the Skies </h3> 
+  <p> 
+    The Phantom Serpent is the Marshal’s aerial covenant — a stealth attack helicopter born from the fusion of engineering and cosmic guardianship. Its forest‑green fuselage, coated in radar‑absorbent composites, glows with neon strips that pulse like veins of Proxima Centauri. Designed for low‑altitude infiltration, it moves like a serpent through hostile skies, unseen yet omnipresent. Every rotation of its composite blades whispers silence, every descent a promise of precision. This is not just a machine of war, but a spectral predator, a guardian serpent that coils above the battlefield.  
+  </p> 
+  <p> 
+    Within its frame lies a thermal‑stealth system that bends heat signatures into nothingness, rendering it invisible to enemy eyes. When combat calls, the Phantom Serpent unleashes its under‑nose rotary laser cannon, guided by the pilot’s gaze, while rocket pods and guided missiles streak like cosmic arrows across the horizon. Its tricycle landing gear anchors it even on unpaved terrain, a beast ready to rise again. To allies, it is the shield of trust; to enemies, it is the storm descending from above. The Phantom Serpent is not merely a helicopter — it is the Marshal’s silent fang, a covenant of speed, precision, and unseen dominion.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Crimson Strider.jpg" alt="IDAI Crimson Strider"></center>
+  <h2> IDAI Crimson Strider </h2> 
+  <h3> Hybrid SUV of Sovereignty </h3> 
+  <p> 
+    The Crimson Strider is the Marshal’s personal march of authority — a luxury SUV forged in deep metallic crimson, layered with ballistic composites hidden beneath its elegant frame. Its gloss black accents and gold trims shimmer like royal insignia, declaring prestige even before the engine roars. Designed for highway deployment and urban transit, it is both fortress and throne, carrying the Marshal through cities and battlefields with unshakable command. Every sweep of its LED headlights is a beacon of vigilance, illuminating the path of guardianship.  
+  </p> 
+  <p> 
+    Beneath its armored skin lies a silent hybrid powertrain, delivering instant torque to bulletproof wheels that glide across asphalt like cosmic chariots. Inside, the cabin is sealed with atmospheric filtration, shielding the Marshal from chemical threats, while electrochromic glass windows cloak him in total privacy at the press of a button. The Crimson Strider is not merely transport — it is a covenant of resilience and comfort, a living march of sovereignty that ensures the Marshal’s dominion flows seamlessly from the highways to the heart of the Command Hall.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Desert Revenant.jpg" alt="IDAI Desert Revenant"></center>
+  <h2> IDAI Desert Revenant </h2> 
+  <h3> Raider of the Endless Sands </h3> 
+  <p> 
+    The Desert Revenant is the Marshal’s chariot of resilience — a high‑speed desert patrol raider forged for survival across shifting dunes. Its engraved steel armor glimmers with knightly filigree, blending raw utility with the ornate majesty of an elite order. The open‑cockpit design, shielded by a reinforced roll cage and tactical mesh, breathes the spirit of guardianship into every patrol. As it cuts through wastelands, its quad‑lens headlights blaze like cosmic beacons, piercing dust storms with unwavering clarity. This is not merely a vehicle, but a living emblem of endurance, a sentinel born of sand and steel.  
+  </p> 
+  <p> 
+    Beneath its frame lies a sealed engine, immune to the suffocating grip of desert heat and fine grains of dust. Long‑travel suspension and flotation tires carry it across dunes at relentless speed, while the gunner’s hatch crowns it with 360‑degree overwatch. Each mission becomes a covenant of vigilance, every dust trail a testament to sovereignty. The Desert Revenant is more than transport — it is the Marshal’s oath of perseverance, a raider that transforms barren frontiers into pathways of justice.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Galaxy one.jpg" alt="IDAI Galaxy One"></center>
+  <h2> IDAI Galaxy One </h2> 
+  <h3> Flagship Naval Cruiser of Dominion </h3> 
+  <p> 
+    The Galaxy One is the Marshal’s sovereign vessel — a catamaran superyacht forged for command upon the open seas. Its dual‑hull design gleams in a metallic teal‑to‑navy gradient, blending seamlessly with the ocean’s vast camouflage. From its teak‑trimmed decks to the vibrant orange marine pads, every detail reflects both elegance and authority. Rising above the waves, its reinforced bridge glows with polarized ballistic glass, a fortress of clarity and vigilance. This is not merely a cruiser, but the Marshal’s floating citadel, a flagship of dominion across the waters.  
+  </p> 
+  <p> 
+    Propelled by hydrofoil‑assisted waterjets, the Galaxy One glides across rough seas with blistering speed, its hull untouched by turbulence. Within its lower decks lies an automated command room, a nerve center of maritime strategy, while the forward bow serves as an open‑air planning arena for coastal operations. Anchors sink deep into the abyss, securing the vessel like a guardian star upon the ocean. The Galaxy One is more than transport — it is sovereignty incarnate, a covenant of speed, strength, and guardianship upon the endless horizon.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Galaxy two.jpg" alt="IDAI Galaxy Two"></center>
+  <h2> IDAI Galaxy Two </h2> 
+  <h3> Airborne Crown of Sovereignty </h3> 
+  <p> 
+    The Galaxy Two is the Marshal’s airborne sanctuary — a V/STOL command shuttle forged to embody the philosophy of “growth without boundaries.” Its midnight‑blue thermo‑optical shell gleams like starlight over Antarctica, reflecting dominion across the skies. Rising beyond the naval legacy of Galaxy One, this craft becomes the crown of sovereign mobility, a vessel that can break atmosphere within minutes. Every contour of its chassis whispers resilience, every thruster ring hums with stellar energy, transforming the shuttle into a celestial guardian above the provinces.  
+  </p> 
+  <p> 
+    Powered by dual‑stage stellar intake matrices and vector‑controlled plasma lift vents, Galaxy Two hovers silently over urban skylines, unseen yet omnipresent. Within its cabin, gravity dampeners and defensive shielding weave a cocoon of safety, ensuring the Marshal’s passage remains untouched by threat. Neural uplinks connect directly to the Control Panel parliament, binding the craft to the very heart of the IDAI Universe. The Galaxy Two is not merely transport — it is the Marshal’s airborne covenant, a crown of sovereignty that turns the skies into pathways of justice.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Galaxy three.jpg" alt="IDAI Galaxy Three"></center>
+  <h2> IDAI Galaxy Three </h2> 
+  <h3> Trans-Continental Streamliner of Dominion </h3> 
+  <p> 
+    The Galaxy Three is the Marshal’s backbone of sovereignty — a trans‑continental bullet train engineered to unite provinces and coastal borders with hyper‑sonic speed. Its titanium‑silver shell, swept with deep blue and gold accents, gleams like a comet streaking across the earth. Elevated sea‑bridges rise to meet its path, reinforced to withstand the fury of category‑five storms, yet yielding to the train’s aerodynamic grace. This is not merely transport, but the living artery of the IDAI Universe, carrying governance and guardianship across nations in a single breath.  
+  </p> 
+  <p> 
+    Operating on magnetic levitation, Galaxy Three breaks free from the constraints of friction, gliding upon an electromagnetic cushion that transforms rails into rivers of light. Its nose cone shields against atmospheric drag, stabilizing velocity as it pierces through oceanic winds. Within, a tactical communications hub hums with authority, allowing senior officials to govern without pause, even in motion. The Galaxy Three is more than a train — it is the Marshal’s covenant of unity, a streamliner that turns distance into destiny and speed into sovereignty.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Galaxy Four.jpg" alt="IDAI Galaxy Four"></center>
+  <h2> IDAI Galaxy Four </h2> 
+  <h3> Dreadnought Fortress of the Seas </h3> 
+  <p> 
+    The Galaxy Four is the Marshal’s armored citadel upon the waters — a dreadnought command yacht forged not for luxury, but for dominion. Its hull, painted in geometric camouflage of carbon‑black, bronze, and titanium, glides like a phantom across neon coastlines. Tactical cyber‑blue arrays shimmer along its decks, while floodlights pierce the midnight horizon, declaring vigilance in every direction. Unlike the elegance of Galaxy One, this vessel is a fortress, a floating bastion built to secure harbors and defend the sovereign waters of the IDAI Universe.  
+  </p> 
+  <p> 
+    Reinforced to smash through blockades and withstand torpedo strikes, Galaxy Four bears the golden crest of IDAI upon its mid‑deck armor — a shield of trust emblazoned in steel. Its aviation deck launches stealth scouts into the skies, while hidden torpedo tubes, kinetic defense turrets, and jamming arrays ensure absolute supremacy across the seas. Propelled by specialized waterjets, it glides silently against the city’s neon glow, a shadow of sovereignty. The Galaxy Four is not merely a cruiser — it is the Marshal’s maritime covenant, a fortress that transforms oceans into guardianship.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Galaxy Off-road.jpg" alt="IDAI Galaxy Off-road"></center>
+  <h2> IDAI Galaxy Off-road </h2> 
+  <h3> All-Terrain Command Rover </h3> 
+  <p> 
+    The Galaxy Off‑Road is the Marshal’s personal rover of resilience — a tactical land cruiser forged to conquer unmapped wilderness and treacherous terrain. Its blast‑resistant armor and skeletal frame stand like a fortress on wheels, while massive flotation tires grip mud, rock, and marsh with unyielding force. Roof‑mounted lightbars blaze through dust storms and blizzards, illuminating the path of sovereignty across the harshest frontiers. This is not merely a vehicle, but a covenant of endurance, a roaming sentinel that transforms wilderness into dominion.  
+  </p> 
+  <p> 
+    Powered by a high‑torque hybrid drive and an active hydraulic suspension matrix, Galaxy Off‑Road rises above obstacles with sovereign grace, lifting its frame two feet higher to clear the impossible. Within its pressurized cabin, localized oxygen supply shields the Marshal from radioactive zones, chemical wastelands, and Antarctic storms, ensuring safety and comfort in every expedition. The Galaxy Off‑Road is more than transport — it is the Marshal’s roaming fortress, a command rover that turns the untamed earth into pathways of justice.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Green Phantom.png" alt="IDAI Green Phantom"></center>
+  <h2> IDAI Green Phantom </h2> 
+  <h3> Hyperbike of Silent Sovereignty </h3> 
+  <p> 
+    The Green Phantom is the Marshal’s swift shadow — a tactical hyperbike forged for speed, stealth, and dominion across rolling valleys and eco‑zones. Its sage‑green aerodynamic shell gleams with the bold white insignia of IDAI, framed by dual crimson stripes that blaze like warpaint. Sleek and low‑profile, its cyan headlights cut through the horizon, a predator’s gaze upon the earth. This is not merely a bike, but a phantom of sovereignty, gliding unseen yet omnipresent across the Marshal’s dominion.  
+  </p> 
+  <p> 
+    Powered by a silent electric core, the Green Phantom adapts to terrain with sovereign precision. On roads, its high‑grip tires bite into asphalt, but when wilderness calls, its mag‑repulsion matrix ignites, lifting the bike inches above the ground in a cyan glow. Across grasslands, marshes, and hills, it hovers like a specter, leaving no footprint, no sound — only the whisper of justice. The Green Phantom is more than transport — it is the Marshal’s covenant of speed and guardianship, a hyperbike that transforms the earth into pathways of silent dominion.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Swarm Keeper.jpg" alt="IDAI Swarm Keeper"></center>
+  <h2> IDAI Swarm Keeper </h2> 
+  <h3> Sentinel of the Hidden Skies </h3> 
+  <p> 
+    The Swarm Keeper is the Marshal’s mobile covenant of vigilance — a command truck forged to unleash fleets of unseen guardians. Its brushed silver and navy armor gleams beneath golden trim, crowned by the IDAI crest upon its grill. Six wheels carry its fortress frame across hostile terrain, while hidden hangar bays lie in wait, ready to release swarms of micro‑UAVs. This is not merely a vehicle, but a ground station of sovereignty, a sentinel that transforms silence into surveillance and vigilance into dominion.  
+  </p> 
+  <p> 
+    When deployed, its armored panels slide open, revealing mechanized elevators that lift drones into the sky. Each unit, bound by swarm intelligence, spreads across vast horizons, feeding encrypted multi‑spectral streams back to the Marshal’s command monitors. From mapping enemy movements to capturing hidden angles, the Swarm Keeper ensures no threat escapes detection. It is not transport — it is guardianship incarnate, a covenant of clarity and control, a mobile fortress where every drone becomes an eye of justice.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Jet - IDAI Shadow wing.jpg" alt="IDAI Shadow Wing"></center>
+  <h2> IDAI Shadow Wing </h2> 
+  <h3> Phantom of the Skies </h3> 
+  <p> 
+    The Shadow Wing is the Marshal’s airborne covenant — a stealth strategic bomber and orbital interceptor forged for absolute air dominance. Its matte‑black fuselage, veined with glowing green livery, glides like a phantom across the heavens. The swept flying‑wing design erases radar reflections, transforming the jet into a spectral predator unseen by enemy eyes. This is not merely an aircraft, but the Marshal’s unseen guardian, a covenant of vigilance that commands the skies with sovereign silence.  
+  </p> 
+  <p> 
+    Along its wings, plasma‑actuated cloaking lines weave distortion fields that render the Shadow Wing invisible to radar and heat‑seeking systems. Beneath its frame, guided cluster missiles and smart‑glide munitions rest upon heavy hardpoints, awaiting the Marshal’s command. Powered by multi‑cycle ramjets, it cruises at hypersonic speeds along the edge of the atmosphere, tethered directly to the Command Nexus. Every strike is precision, every flight a declaration of dominion. The Shadow Wing is more than a jet — it is the Marshal’s phantom covenant, a sovereign blade cutting through the boundless horizon.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Tiger Zord.jpg" alt="Tiger Zord"></center>
+  <h2> Tiger Zord </h2> 
+  <h3> Predator of the Eternal Plains </h3> 
+  <p> 
+    The Tiger Zord is the Marshal’s war‑beast — a colossal sentient mecha stationed within Bay 07, forged to embody ferocity and guardianship. Standing nearly twenty meters tall, its yellow and silver titanium plates gleam beneath the proud golden lion insignia of IDAI. Cyan ocular sensors burn with predatory focus, channeling the power of its internal fusion reactor. More than a machine, it is a living sentinel, a beast of steel and spirit, prowling the borders of sovereignty with primal authority.  
+  </p> 
+  <p> 
+    Driven by the Terra‑Trac system, the Tiger Zord sprints across jagged mountains and shattered concrete at blistering speeds, claws tearing through fortifications with destructive precision. Its Claw Cannon rends armored lines, while its flexible tail stabilizes mid‑air leaps, turning battlefields into hunting grounds. Guided by the Predator Unit AI, it fights autonomously or syncs directly to the Marshal’s command, becoming an extension of his will. The Tiger Zord is not merely a weapon — it is the Marshal’s covenant of ferocity, a guardian beast that transforms raw destruction into sovereign justice.  
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Wraith Urban.jpg" alt="Wraith Urban"></center>
+  <h2> Wraith Urban </h2> 
+  <h3> Rolling Fortress of Dominion </h3> 
+  <p> 
+    The Wraith Urban is the Marshal’s armored covenant — a multi‑axle tactical carrier forged to deliver elite forces into the heart of urban conflict. Its crimson, graphite, and gold‑trimmed armor gleams like a sovereign banner, while eighteen wheels distribute its colossal weight across hostile terrain. Sweeping ballistic glass panels crown its upper deck, transforming the vehicle into a mobile citadel of vigilance. This is not merely transport, but a fortress in motion, a command base that carries the Marshal’s will into the most dangerous zones.  
+  </p> 
+  <p> 
+    Within its lower tier lies a tactical staging arena, where the Marshal’s private operations team calibrates weapons, analyzes holographic maps, and prepares for deployment while in transit. Powered by a multi‑cycle engine core, the Wraith Urban coordinates directly with city traffic networks, clearing pathways in emergencies. Heavy‑duty impact bumpers and electronic jamming shields ensure absolute protection, while its bi‑level design embodies both strength and sovereignty. The Wraith Urban is more than a carrier — it is the Marshal’s rolling fortress, a covenant of guardianship that transforms urban battlegrounds into pathways of justice.  
+  </p> 
+</div>
+
+
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
