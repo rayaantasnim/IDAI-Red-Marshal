@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Red Marshal Vehicles</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+  </style>	
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Red Marshal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="suit.html">Suit</a></li>
+          <li class="nav-item"><a class="nav-link special" href="vehicle.html">Vehicles</a> </li>
+          <li class="nav-item"><a class="nav-link " href="arsenal.html">Arsenals</a></li>
+          <li class="nav-item"><a class="nav-link " href="Command.html">Command</a></li> 
+        </ul>
+      </div>
+    </div>
+  </nav><br>
+
+<div class="section"> 
+  <center><img src="Super Cars Fleet.jpg" alt="Super Cars Fleet"></center>
+  <h2> Super Cars Fleet </h2> 
+  <h3> The Official High-Speed Escort </h3> 
+  <p> 
+    The Official Super Cars Fleet stands as an awe-inspiring convergence of engineering excellence, raw mechanical horsepower, and elite technological sophistication within the IDAI Sovereign State. Formed to serve as the high-speed escort and rapid-deployment fleet for the Red Marshal, this extraordinary convoy features world-class hypercars and luxury flagships, including Pagani, Bugatti, Rolls-Royce, Bentley, Ferrari, and Lamborghini. Arrayed across multi-lane coastal highways and strategic transit corridors, these vehicles are far more than status symbols; each machine is re-engineered with bespoke IDAI defense integration, reinforced chassis materials, and sovereign AI telemetry links that sync directly with Rayaan Tasnim’s central command. 
+  </p> 
+  <p> 
+    Whether cruising in formation or spearheading high-stakes diplomatic and tactical motorcades, the Super Cars Fleet dominates every stretch of road with unmatched presence and speed. Their roaring engines and flawless aerodynamics embody the speed, precision, and absolute authority of the IDAI Universe, proving that supreme leadership travels at the bleeding edge of power. From hyper-performance interceptors to ultra-luxurious open-top cruisers, this unified armada ensures that every official movement across global frontiers is executed with effortless dominance, supreme security, and flawless grandeur. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Super Truck.jpg" alt="IDAI Sovereign Fortress"></center>
+  <h2> Sovereign Fortress </h2> 
+  <h3> Apex Heavy Interceptor </h3> 
+  <p> 
+    Forged to command any hostile environment without sacrificing velocity, the Sovereign Fortress is the Red Marshal’s ultimate heavy-armored tactical interceptor. Built upon a bespoke composite chassis reinforced with classified ballistic plating and run-flat magnetic tire systems, this monolithic machine effortlessly defies the limitations of conventional armored vehicles. Under its menacing, matte-black exterior lies a high-output hybrid powertrain that launches this multi-ton juggernaut to incredible, sports-car-rivaling speeds across highway routes and rugged terrain alike. Adorned with glowing IDAI insignias and high-intensity tactical emergency strobe arrays, it projects instantaneous sovereign authority, warning any adversary that an unyielding force of law and technological dominance has taken the field. 
+  </p> 
+  <p> 
+    Inside its climate-sealed cabin, the Sovereign Fortress operates as a mobile tactical command hub directly linked to Rayaan Tasnim’s central Antarctic mainframe. Roof-mounted electro-optical tracking turrets, integrated EMP countermeasures, and real-time threat-detection AI ensure that the Marshal remains completely untouchable during high-speed transit. Whether leading tactical convoys through volatile urban zones or breaching extreme wilderness battlegrounds, the vehicle combines impenetrable defense with terrifying velocity. It is not merely a transport truck, but an unstoppable heavy interceptor—a living testament to the Red Marshal’s commitment to absolute guardianship, sovereignty, and military precision. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Armored IDAI Violet Voyager.jpg" alt="Violet Voyager"></center>
+  <h2> Violet Voyager </h2> 
+  <h3> Bespoke Sovereign Sanctuary </h3> 
+  <p> 
+    Crafted as an exclusive one-of-one masterpiece for Rayaan Tasnim, the Violet Voyager is the ultimate synthesis of ultra-luxurious comfort and military-grade invulnerability. Featuring a striking angular silhouette wrapped in custom metallic obsidian and deep amber-copper armor plating, this bespoke SUV serves as the Red Marshal’s private mobile sanctuary. Beneath its sculpted, angular bodywork lies an impenetrable defense matrix, complete with heavy multi-layer ballistic glass, reinforced underbody blast shielding, and an active electromagnetic defense perimeter. Designed specifically to navigate high-threat zones without compromising on elegance, the vehicle projects a commanding, unmistakable presence whether gliding through metropolitan centers or patrolling remote, hostile battlefields. 
+  </p> 
+  <p> 
+    Inside, the Violet Voyager transcends standard automotive design, offering a private, acoustic-sealed cabin adorned with handcrafted leather, ambient lighting, and bespoke executive seating. Despite its lavish interior, it remains a fully equipped command center powered by a massive twin-turbocharged hybrid powertrain and seamless IDAI satellite telemetry links. Every control system is integrated directly with the sovereign network, allowing the Red Marshal to direct global operations in absolute serenity and safety. Unique in existence, the Violet Voyager stands as a true crown jewel of bespoke engineering—an unbeatable combination of supreme luxury, extreme tactical mobility, and unyielding protection. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Gray Canon.jpg" alt="Gray Canon"></center>
+  <h2> Gray Canon </h2> 
+  <h3> Highway Bullet Express </h3> 
+  <p> 
+    Engineered as a revolutionary one-of-one cross-over between rail dynamic efficiency and asphalt mobility, the Gray Canon is the Red Marshal’s ultra-high-speed road cruiser. Designed around the sleek, hyper-aerodynamic geometry of a mini bullet train, this unique vehicle features an elongated gunmetal-gray monocoque that slices through air resistance with virtually zero drag. Built explicitly to travel long multi-lane highways at speeds previously reserved for magnetic levitation trains, the Gray Canon utilizes advanced active ground-effect aerodynamics, wide-stance stability systems, and glowing luminescent guide striping along its chassis. Its striking glass-canopy cockpit offers panoramic visibility, housing high-tech dual pilot stations equipped with direct IDAI neural-link telemetry for high-speed automated navigation. 
+  </p> 
+  <p> 
+    Underneath its streamlined titanium alloy skin lies a specialized high-density electric thrust matrix capable of launching the vehicle into terrifying highway cruise speeds while remaining whisper-quiet. The interior functions as an executive transit module, giving Rayaan Tasnim and his inner council an uninterrupted, ultra-smooth sanctuary while hurtling between sovereign territories. Heavy-duty magnetic dampeners eliminate road vibrations entirely, creating the sensation of floating on magnetic rails across open concrete and tarmac. The Gray Canon isn't just a vehicle; it is a vision of futuristic transit—a bespoke highway bullet train that cements the IDAI Sovereign State’s total domain over land routes. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="IDAI Sovereign Spire.jpg" alt="Sovereign Spire"></center>
+  <h2> Sovereign Spire </h2> 
+  <h3> Twin-Canopy Rapid Interceptor </h3> 
+  <p> 
+    Engineered for immediate response and blistering acceleration, the Sovereign Spire is the Red Marshal’s ultimate two-seat rapid-action interceptor. Featuring a distinct dual-bubble jet canopy layout, this high-performance machine isolates the pilot and navigator in individual reinforced cockpits designed for maximum focus during extreme maneuvers. The wide, aggressive rear stance, angular composite armor bodywork, and low-drag ground clearance allow it to blast through dusty terrain and open highways with unmatched stability. Built around a lightweight titanium-carbon chassis, the Sovereign Spire accelerates instantly, making it the premier strike vehicle for urgent reconnaissance, high-speed VIP extraction, and swift tactical deployments where every single second counts. 
+  </p> 
+  <p> 
+    Inside the twin cockpits, both seats are equipped with fighter-jet style bucket racing harnesses, Heads-Up Displays (HUD), and direct neural links to the IDAI sovereign satellite network. The dual-seater setup ensures seamless co-pilot targeting, electronic warfare management, and real-time navigation while traveling at blinding velocity. Backed by high-output vectoring thrusters and active aerodynamic diffusers, the vehicle handles tight turns and hostile terrain without bleeding speed. Purpose-built for rapid action, the Sovereign Spire serves as a deadly, hyper-fast guardian—delivering Rayaan Tasnim and his elite operative straight into the heart of any crisis with absolute precision and overwhelming power. 
+  </p> 
+</div>
+<div class="section"> 
+  <center><img src="IDAI Ultimate Apex.jpg" alt="Ultimate Apex"></center>
+  <h2> Ultimate Apex </h2> 
+  <h3> Crown Hypercar of Sovereign Speed </h3> 
+  <p> 
+    Forged as the definitive pinnacle of land velocity, the Ultimate Apex is Rayaan Tasnim’s personal, one-of-one high-speed supercar built to outrun virtually anything on the planet. Wrapped in a full exposed matte-carbon-fiber monocoque, this aggressive hypercar blends hyper-aerodynamic aggressive downforce winglets, massive rear diffusers, and ultra-wide performance tires engineered to stick to the asphalt at record-breaking speeds. Slicing through long highway corridors with a backdrop of distant urban skylines, its razor-sharp taillights and glowing IDAI insignias signal an untouchable presence. Designed specifically for the Red Marshal when absolute speed and personal agility are required, the Ultimate Apex represents the perfect fusion of exotic hypercar prestige and raw sovereign power. 
+  </p> 
+  <p> 
+    Beneath its sculpted rear glass deck sits a quad-turbocharged hybrid powertrain integrated with experimental quad-vector electric motors, delivering instant torque and mind-bending acceleration. The interior canopy features a race-inspired cockpit wrapped in lightweight carbon weave and alcantara, complete with direct IDAI neural-link telemetry for real-time automated assistance during hyper-speed maneuvers. Enhanced with active radar-evading composite panels and a direct satellite uplink to the Antarctic mainframe, the machine guarantees the Marshal complete control over every open road. The Ultimate Apex isn't merely a supercar; it is the ultimate expression of individual dominance—a hyper-velocity force of nature designed to lead from the absolute front. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Rolls Royce Areebaowa Droptail.jpg" alt="Areebaowa Droptail"></center>
+  <h2> Areebaowa Droptail </h2> 
+  <h3> The Fifth Sovereign Masterpiece </h3> 
+  <p> 
+    Commissioned as the legendary fifth and final entry in the ultra-exclusive Droptail series, the Rolls-Royce Areebaowa Droptail stands as an irreplaceable one-of-one masterpiece built uniquely for Rayaan Tasnim. Cruising along sweeping ocean coastal highways, its soft pearl-cream coachwork and custom rear deck wood marquetry capture the essence of pure, timeless automotive art. Unlike any coachbuilt car before it, the Areebaowa Droptail seamlessly merges old-world artisan craftsmanship with hidden IDAI defense technologies. Beneath its elegant, open-air roadster silhouette lies concealed ballistic armor reinforcement, a silent V12 twin-turbo hybrid engine, and a bespoke acoustic cabin designed to offer an oasis of calm while navigating coastal borders or high-profile international summit routes. 
+  </p> 
+  <p> 
+    The interior features hand-stitched deep teal leather, integrated neural-link communications, and a starburst wood inlay rear deck that serves as an artistic symbol of sovereign power. While engineered to exude ultimate prestige and regal grandeur, the vehicle maintains direct encrypted uplinks to the IDAI Antarctic mainframe, ensuring the Red Marshal remains fully connected to his global network in total luxury. As the final, most ambitious Droptail ever created by Goodwood, the Areebaowa Droptail is not merely a motor car—it is the crown jewel of high luxury, representing the absolute pinnacle of individual prestige, solitary elegance, and sovereign leadership across the open world. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="The IDAI Hydra-V Surface-Shifter.jpg" alt="Hydra-V Surface-Shifter"></center>
+  <h2> Hydra-V Surface-Shifter </h2> 
+  <h3> Trans-Terrain Amphibious Dominator </h3> 
+  <p> 
+    Engineered to erase the boundary between land and water, the Hydra-V Surface-Shifter is the Red Marshal’s ultimate adaptive multi-environment machine. Built around a revolutionary transforming chassis, this futuristic craft transitions seamlessly from a high-speed highway cruiser into a high-performance aquatic vessel. On asphalt, its high-torque drive assemblies and active aerodynamic bodywork allow it to reach blistering terrestrial speeds. Upon reaching shoreline or riverbanks, the vehicle’s articulated wheel hubs dynamically reconfigure, deploying hydrofoil fins and high-thrust water jets that allow it to lift above coastal waves or glide effortlessly across river currents. This instant mechanical transformation ensures that no river, coast, or highway line can ever disrupt Rayaan Tasnim’s high-speed tactical deployments. 
+  </p> 
+  <p> 
+    Inside the enclosed glass-canopy cockpit, dual pilot seats feature advanced aquatic-terrestrial navigation suits, real-time depth telemetry, and direct satellite uplinks to the IDAI Antarctic mainframe. The vehicle’s outer shell is lined with stealth-coated composite armor, active wave-dampening stabilizers, and luminescent plasma thrusters that provide unmatched maneuverability across sandy beaches and rough waters alike. Designed for rapid-action extraction, coastal reconnaissance, and border crossing, the Hydra-V Surface-Shifter gives the Red Marshal complete dominion over land and sea. It stands as a true marvel of sovereign engineering—a transforming force capable of conquering any terrain with speed, agility, and absolute power. 
+  </p> 
+</div>
+
+<form class="super">
+  <center>
+    <h1>Explore More:</h1>
+    <a href="vehicle.html" class="btn-special">1</a>
+    <a href="#" class="btn-special s">2</a><br>
+  </center>
+</form><br><br>
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
