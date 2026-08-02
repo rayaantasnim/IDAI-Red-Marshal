@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>IDAI Red Marshal Residencial Zone: Luce</title>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Navbar */ 
+    .navbar {
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      margin: 0 !important;
+      padding: 5 !important;   /* Bootstrap default padding override */
+    }
+
+    .navbar .container-fluid {
+      padding: 0 !important;   /* container padding override */
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #222 !important;
+      font-size: 16px;
+      margin: 0;
+      padding: 8px 12px;
+    }
+
+    .nav-link {
+      display: inline-block;
+      background-color: #fff;
+      color: #FF4500 !important;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      border: 1px solid #FF4500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: #FFD700;
+      color: #111 !important;
+      box-shadow: 0 0 12px #FF8C00;
+      transform: scale(1.05);
+    }
+
+    .special {
+      background-color: #42f5e3;
+    }
+
+    .special:hover {
+      background: #42f5e3;
+    }
+
+    .para{
+      width:auto;
+      text-align: justify;
+      height:auto;
+      margin-left:20px;
+      margin-right:20px;
+      padding:15px;
+      border:1.5px solid #1a6bed;
+      border-radius:10px;
+    }
+
+    /* Body padding so content doesn't hide under fixed navbar */
+    body {
+      padding-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      padding: 15px;
+      color: #111;
+      font-size: 14px;
+      border-top: 3px solid #FF4500;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-link {
+        font-size: 14px;
+        padding: 8px;
+        width: 90%; /* বাটনগুলো বড় হয়ে যাওয়ার সমস্যা এড়াবে */
+        margin:5px;
+      }
+      .navbar-brand {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+  body {
+    margin-left: 3px !important;
+    margin-right: 3px !important;
+    margin-top:30px !important;
+    padding: 0 !important;
+
+    h2{
+      margin-top:50px !important;
+    }
+  }
+
+  .section {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  .navbar {
+    padding: 5px !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    margin: 3px 0 !important;
+    width: 100%;
+    display: block;
+  }
+
+  .min {
+    margin: 10px auto !important;
+    padding: 8px !important;
+    font-size: 12px !important;
+    width: auto;
+  }
+
+  img {
+    width: 95% !important;
+    margin: 5px auto !important;
+  }
+
+  .events {
+    margin: 5px !important;
+    padding: 12px !important;
+  }
+
+  .best-brand, .sovereign-state, .state-brand {
+    margin: 8px auto !important;
+    padding: 12px !important;
+    width: auto;
+  }
+
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .explore-btn {
+    width: 90% !important;
+    margin-bottom: 10px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+  }
+
+  footer {
+    padding: 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section {
+    margin: 8px !important;
+    padding: 10px !important;
+    width: auto;
+  }
+
+  /* Nested section inside section */
+  .section .section {
+    margin: 5px !important;
+    padding: 8px !important;
+    width: auto;
+    background: #fff;          /* nested section আলাদা বোঝানোর জন্য */
+    border: 1px solid #ddd;    /* subtle border */
+    border-radius: 8px;
+  }
+
+  .section .section p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin: 5px 0 !important;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🌐IDAI Red Marshal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="suit.html">Suit</a></li>
+          <li class="nav-item"><a class="nav-link special" href="house.html">Residence</a></li>
+          <li class="nav-item"><a class="nav-link " href="vehicle.html">Vehicles</a> </li>
+          <li class="nav-item"><a class="nav-link" href="arsenal.html">Arsenals</a></li>
+          <li class="nav-item"><a class="nav-link " href="Command.html">Command</a></li> 
+        </ul>
+      </div>
+    </div>
+  </nav><br>
+
+<div class="section"> 
+  <center><img src="Sovereign Spire Master Suite.jpg" alt="The Sovereign Spire Master Suite"></center>
+  <h2> The Sovereign Spire Master Suite </h2> 
+  <h3> The Sovereign Sanctuary of the Red Marshal </h3> 
+  <p> 
+    Nestled securely within the apex of the majestic 45-story Sovereign Spire, the Red Marshal’s Master Suite stands as the most heavily protected and intensely private sanctuary within the entire empire. Rising above the bustling strategic sectors and shielded by layers of multi-frequency electromagnetic shielding, acoustic dampening fields, and reinforced titanium bulkheads, this private domain serves as the personal residence and resting place of supreme authority. Every architectural detail is tailored for uncompromised safety and absolute serenity, featuring state-of-the-art threat sensors that continuously monitor for airborne contaminants, structural stress, or unauthorized intrusion frequencies without disturbing the peaceful interior. 
+  </p> 
+  <p> 
+    Conceived as a zone of absolute sovereign isolation, the suite features a strictly camera-free environment to guarantee total personal privacy, contrasting with the estate-wide CCTV and sensor grids found throughout the rest of the campus. Inside its deeply secure confines, the suite houses the Red Marshal's personal workplace for quiet contemplation and decree issuance, a concealed Personal Arsenal Vault containing customized tactical weaponry and elite defense gear, and direct access to the primary Rapid Action Helipad crowning the tower for instantaneous global evacuation. The Sovereign Spire Master Suite is more than a personal bedroom — it is the heartbeat of supreme command, where absolute privacy, uncompromising security, and sovereign authority merge into eternal tranquility. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Security Command Room.jpg" alt="Security Command Room"></center>
+  <h2> Security Command Room </h2> 
+  <h3> The Vigilant Ocular Core of the Estate </h3> 
+  <p> 
+    The Security Command Room stands as the high-tech visual and sensory backbone of the Luce Campus, situated within the subterranean ground level to continuously oversee and protect the entire sovereign domain. Dominated by a massive, curved wall of high-definition monitors, this high-security nexus processes real-time feeds from estate-wide CCTV networks, perimeter sensors, and defense grids simultaneously. Specialized operator consoles manned by elite security personnel track threat levels, environmental matrices, and CragNon data overlays, ensuring that every square meter of the campus remains under unbroken surveillance and immediate defensive readiness. 
+  </p> 
+  <p> 
+    At the focal point of the room rests the Red Marshal Command Desk, equipped with holographic tactical displays and secure communication arrays linked directly to the campus infrastructure and hidden wallpaper sound boxes. Ambient blue lighting, sound wave monitors, and dedicated tactical readouts—such as Black Delta Force status feeds—reinforce an atmosphere of absolute control, precision, and unyielding vigilance. The Security Command Room is much more than a surveillance hub; it is the sleepless guardian of the empire, where advanced artificial intelligence, global data processing, and supreme operational security converge into an impenetrable shield. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Diplomatic Reception Room.jpg" alt="Diplomatic Reception Room"></center>
+  <h2> Diplomatic Reception Room </h2> 
+  <h3> The Grand Lobby of International Prestige </h3> 
+  <p> 
+    The Diplomatic Reception Room serves as the magnificent ground-level foyer and welcoming lobby for international guests arriving at the Luce Campus. Designed to project an aura of supreme elegance, authority, and diplomatic grace, this expansive hall features soaring neoclassical ceilings, polished white-and-gold marble floors, intricate wood-paneled walls, and a breathtaking central crystal chandelier. Guarded by elite personnel and lined with international flags and ceremonial seals, the space merges high-security protocols with the utmost standards of sovereign hospitality. 
+  </p> 
+  <p> 
+    The interior is meticulously arranged with luxurious seating areas, classic Persian rugs, and a sophisticated curved wooden reception desk where visiting dignitaries and world leaders are formally greeted. Towering arched windows flood the room with natural light while offering picturesque views of the estate's lush exterior grounds and water features, complemented by large digital display screens showcasing the campus environment. Integrated seamlessly with the estate's high-tech security grid and CragNon communication systems, the Diplomatic Reception Room stands as the prestigious gateway where global diplomacy and imperial power first meet. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Private Underground Garage.jpg" alt="Private Underground Garage"></center>
+  <h2> Private Underground Garage </h2> 
+  <h3> The Secure Subterranean Motor Pool </h3> 
+  <p> 
+    The Private Underground Garage serves as the heavily secured subterranean motor pool and discreet transit hub of the Luce Campus. Carved deep into the lower foundational levels and shielded by reinforced blast doors, advanced electromagnetic shielding, and continuous perimeter monitoring, this expansive facility houses the Red Marshal's elite transport fleet and secure convoy vehicles. The environment is engineered for absolute operational readiness, featuring climate-controlled parking bays, direct high-speed lift access to the upper residence and command wings, and integrated maintenance diagnostics linked straight to the estate's security grid. 
+  </p> 
+  <p> 
+    Illuminated by sleek architectural LED strips along polished industrial flooring, the garage is optimized for rapid, covert deployments and discreet arrivals or departures. Advanced sensor arrays track every movement within the facility, ensuring that all vehicles—from armored tactical transports to executive cars—remain primed and secure under the watchful eyes of CragNon and the security command team. The Private Underground Garage stands as a vital subterranean artery of the estate, where maximum logistical stealth, impenetrable security, and supreme mobility seamlessly intersect. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Secure Basement & Storage Vaults.jpg" alt="Secure Basement & Storage Vaults"></center>
+  <h2> Secure Basement & Storage Vaults </h2> 
+  <h3> The Impregnable Archives of the Empire </h3> 
+  <p> 
+    The Secure Basement & Storage Vaults form the deeply buried, impenetrable archival core of the Luce Campus, designed to house and protect the most critical assets, historical records, and sovereign reserves of the Red Marshal's empire. Shielded by multi-ton blast doors, thick tungsten-alloy walls, and advanced biometric access protocols, this subterranean stronghold is completely isolated from external environmental hazards and unauthorized breaches. Every square meter of the vaults is continuously monitored by high-definition CCTV, seismic sensors, and real-time threat detection grids linked directly to CragNon and the central security command. 
+  </p> 
+  <p> 
+    Inside its vast, climate-controlled chambers, rows of secure containment racks, heavy-duty armored storage lockers, and digital data archives store classified documents, vital provisions, and high-priority physical assets. The sterile, industrial aesthetic reflects absolute security and efficiency, ensuring that every stored item remains pristine and instantly retrievable during any emergency or prolonged contingency. The Secure Basement & Storage Vaults stand as an unyielding fortress of preservation, where absolute confidentiality, elite physical defense, and uncompromised structural integrity converge. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Sovereign Medical Wing.jpg" alt="Sovereign Medical Wing"></center>
+  <h2> Sovereign Medical Wing </h2> 
+  <h3> The Advanced Sanctuary of Health and Bio-Reconstruction </h3> 
+  <p> 
+    The Sovereign Medical Wing operates as the premier ground-level medical and bio-reconstruction facility of the Luce Campus, engineered to provide immediate emergency trauma care and elite health maintenance for the Red Marshal and high command. Encased in sterile antimicrobial alloys and protected by reinforced shielding, this state-of-the-art medical complex maintains absolute internal purity and operational readiness around the clock. Every diagnostic and treatment bay is seamlessly integrated with the estate's central sensor grid, ensuring zero latency during critical medical responses. 
+  </p> 
+  <p> 
+    Inside its immaculate, brightly lit halls, the wing houses cutting-edge surgical suites, advanced medical stasis pods for rapid cellular recovery, and direct biological reserves tailored for high-command security. Specialized bio-laboratories and automated monitoring stations allow medical personnel and CragNon systems to oversee patient vitals with absolute precision. The Sovereign Medical Wing stands as an unyielding bastion of life and wellness, where futuristic medical technology, strict sterility, and supreme sovereign care converge. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Indoor Heated Pool & Wellness Spa.jpg" alt="Indoor Heated Pool & Wellness Spa"></center>
+  <h2> Indoor Heated Pool & Wellness Spa </h2> 
+  <h3> The Serene Sanctuary of Restoration and Relaxation </h3> 
+  <p> 
+    The Indoor Heated Pool & Wellness Spa serves as the estate's ultimate sanctuary for physical restoration, mental rejuvenation, and luxurious leisure. Situated within the ground level and shielded by sound-dampening architectural designs, this expansive wellness retreat combines a sparkling, climate-controlled indoor heated pool with plush, resort-grade relaxation lounges. Soft ambient lighting, glowing candles, and open-air sunset views blend harmoniously to create an atmosphere of absolute tranquility, offering an elite escape from the high-pressure demands of imperial command. 
+  </p> 
+  <p> 
+    Designed to cater to the highest standards of holistic care, the spa features dedicated massage and therapy bays, private relaxation seating equipped with personalized entertainment, and refined dining options served directly by attentive estate personnel. Integrated seamlessly with the campus security and environmental grids, the space ensures uninterrupted privacy while maintaining optimal air and water purity through automated systems. The Indoor Heated Pool & Wellness Spa stands as a testament to balanced living, where cutting-edge estate engineering and supreme personal well-being converge into absolute peace. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Tech-Forge & Vehicle Maintenance Bay.jpg" alt="Tech-Forge & Vehicle Maintenance Bay"></center>
+  <h2> Tech-Forge & Vehicle Maintenance Bay </h2> 
+  <h3> The Industrial Engine of Innovation and Armor </h3> 
+  <p> 
+    The Tech-Forge & Vehicle Maintenance Bay operates as the heavy-duty industrial and engineering heart of the Luce Campus, designed for the fabrication, repair, and modification of the Red Marshal's tactical fleet and advanced technology. Situated on the secure subterranean ground level, this expansive bay is built with reinforced tungsten-alloy flooring, overhead gantry cranes, and high-voltage power grids capable of supporting heavy armored transport and high-performance craft. The environment hums with activity as automated robotic welding arms, high-precision laser cutters, and diagnostic holo-screens interface directly with CragNon's central systems. 
+  </p> 
+  <p> 
+    Lined with modular tool stations, specialized metal-alloy forges, and secure parts storage lockers, the facility is optimized for rapid turnaround during tactical contingencies. Elite mechanics and automated maintenance drones work seamlessly beneath moody, cinematic LED accent lighting that cuts through volumetric atmosphere. Integrated with the estate's overarching security and environmental filters, the Tech-Forge & Vehicle Maintenance Bay stands as an unyielding powerhouse where engineering genius, mechanical might, and sovereign preparation become one. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Off-Grid Power & Environmental Plant.jpg" alt="Off-Grid Power & Environmental Plant"></center>
+  <h2> Off-Grid Power & Environmental Plant </h2> 
+  <h3> The Autonomous Lifeline of Energy and Ecosystem Control </h3> 
+  <p> 
+    The Off-Grid Power & Environmental Plant serves as the critical life-support and energy core of the Luce Campus, engineered to render the entire estate completely self-sufficient and immune to external disruptions. Anchored deep within the subterranean ground level, this heavily fortified installation houses a high-output Micro-Fusion Core capable of generating limitless, clean energy for every wing, room, and defense grid across the compound. Flanking the core are massive, multi-stage Air and Water Filtration arrays that continuously purify, recycle, and monitor the internal atmosphere and liquid supplies, ensuring total protection against biological, chemical, or radiological threats. 
+  </p> 
+  <p> 
+    Surrounded by thick radiation-shielded bulkheads, heavy-duty conduit networks, and automated diagnostic terminals, the plant operates under the direct, unyielding oversight of CragNon and the central security command. Ambient industrial lighting illuminates towering turbine housings and pressure gauges, reflecting an environment built for maximum resilience and operational permanence. The Off-Grid Power & Environmental Plant stands as the ultimate guarantor of survival, where advanced nuclear engineering, environmental mastery, and absolute autonomy converge. 
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Master Plan War Room.jpg" alt="Master Plan War Room"></center>
+  <h2> Master Plan War Room </h2> 
+  <h3> The High Command Suite of Strategic Supremacy </h3> 
+  <p> 
+    The Master Plan War Room is laid out in a precise octagonal shape covering roughly 450 square meters in the western section of the Strategic Wing. It is built with thick, reinforced concrete walls to provide a secure environment for high-level meetings. Inside, you will find 12 dedicated command terminals, 4 central holographic mapping tables, and high-speed data links designed to handle heavy information loads smoothly. The lighting and air pressure are carefully regulated to keep the room comfortable and stable during long operational hours.
+  </p> 
+  <p> 
+    As the main hub for planning and coordination, the room processes large amounts of operational data from around the campus to help commanders make informed choices quickly. Embedded quietly in the background textures, CragNon's monitoring sub-routine runs subtle diagnostic checks to ensure all systems remain stable: [CRAGNON_SUBNET_04: WALLPAPER_NODE_ACTIVE. BIOMETRIC SCAN CONTINUOUS. ALL DEVIATIONS LOGGED. GLORY TO THE RED MARSHAL.]. With built-in backup life support systems ready to sustain personnel during emergencies, it serves as a reliable, fully equipped space for day-to-day command and long-term strategy.
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="The CragNon Negotiating Chamber.jpg" alt="The CragNon Negotiating Chamber"></center>
+  <h2> The CragNon Negotiating Chamber </h2> 
+  <h3> The Signal-Isolated Supercomputer Interface </h3> 
+  <p> 
+    The CragNon Negotiating Chamber features a circular geometric configuration with a total floor area of 180 square meters, located within the secure interior zone of the Strategic Wing. Its physical boundaries are lined with multilayered electromagnetic shielding and a continuous Faraday cage to completely block outside wireless signals, radio frequencies, and external electronic surveillance. The room is equipped with a central high-performance supercomputer interface terminal, 6 encrypted communication nodes, and acoustic damping wall panels that prevent audio transmission beyond the perimeter. Climate control is managed by a dedicated independent ventilation loop to maintain steady ambient conditions during critical discussions.
+  </p> 
+  <p> 
+    Serving as the primary suite for high-stakes diplomatic talks and secure data exchanges, the chamber processes encrypted external feeds through isolated local servers to safeguard sensitive information. Integrated subtly within the wallpaper pattern design, CragNon maintains a continuous diagnostic loop running silently in the background: [CRAGNON_SUBNET_05: ISOLATION_GRID_SECURE. RF SHIELDING OPTIMAL. ENCRYPTED HANDSHAKE VERIFIED. GLORY TO THE RED MARSHAL.]. With redundant auxiliary power feeds and secure data links, it functions as a controlled environment where confidential decisions can be finalized safely without electronic interference.
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Executive Conference Room.jpg" alt="Executive Conference Room"></center>
+  <h2> Executive Conference Room </h2> 
+  <h3> The Central Boardroom for Strategic Alignment </h3> 
+  <p> 
+    The Executive Conference Room is laid out in a clean rectangular shape spanning roughly 220 square meters, centrally positioned within the primary leadership zone. It is designed to accommodate upper management and project heads for regular briefings and milestone reviews. The space features a solid, custom-built mahogany central conference table surrounded by 16 ergonomic leather chairs, backed by dual high-definition wall displays and integrated audio-visual conferencing equipment. Lighting can be adjusted across multiple zones, and acoustic paneling ensures that all discussions remain private and clear.
+  </p> 
+  <p> 
+    Functioning as the main venue for operational syncs, the room handles day-to-day administrative coordination and cross-departmental planning efficiently. Embedded quietly in the room's subtle wall patterns, CragNon runs a continuous low-level operational ping: [CRAGNON_SUBNET_06: BOARDROOM_FEED_ACTIVE. SYNC CHANNELS STABLE. PARTICIPANT LOGS UPDATED. GLORY TO THE RED MARSHAL.]. Equipped with secure power hubs built directly into the table and reliable backup climate controls, it serves as a practical, professional space for everyday executive decision-making.
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Press & Briefing Chamber.jpg" alt="Press & Briefing Chamber"></center>
+  <h2> Press & Briefing Chamber </h2> 
+  <h3> The Public Communications and Media Hub </h3> 
+  <p> 
+    The Press & Briefing Chamber is designed in a semi-circular auditorium shape covering an area of roughly 300 square meters within the campus administrative wing. It features a raised podium equipped with multi-angle broadcast microphones and high-definition media feeds, facing tiered seating rows that can comfortably accommodate up to 80 attendees. The walls are lined with professional acoustic baffles to prevent echo, and adjustable studio lighting rigs overhead ensure clear video recording and photography during live announcements.
+  </p> 
+  <p> 
+    Operating as the official communications center, the chamber handles public announcements, media broadcasts, and press conferences with external and internal stakeholders. Running quietly within the background wall finishes, CragNon maintains an active communication buffer status: [CRAGNON_SUBNET_07: BROADCAST_FEED_MONITORED. AUDIO ENCRYPTION SECURE. SIGNAL STRENGTH 100%. GLORY TO THE RED MARSHAL.]. Complete with direct fiber-optic uplink lines and secure media distribution ports, it provides a functional and well-managed venue for all official statements and public briefings.
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Quantum Communications Relay Room.jpg" alt="Quantum Communications Relay Room"></center>
+  <h2> Quantum Communications Relay Room </h2> 
+  <h3> The High-Speed Quantum Data Exchange Hub </h3> 
+  <p> 
+    The Quantum Communications Relay Room features an elongated rectangular layout encompassing approximately 200 square meters within the campus technical sector. It is engineered with specialized sub-flooring to house sensitive cryogenic cooling units necessary for stabilizing quantum entanglement transceivers. The facility contains 8 primary quantum processing racks, redundant laser-optical transmission arrays, and magnetic shielding enclosures that protect delicate data streams from external interference. 
+  </p> 
+  <p> 
+    Operating as the backbone for instantaneous, un-hackable data transmission, the room manages encrypted communications across all campus zones and external outposts. Equipped with dedicated power backups and automated thermal regulation systems, it provides a highly secure and dependable environment for managing critical long-range data exchanges without interruption.
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Grand Living Room.jpg" alt="Grand Living Room"></center>
+  <h2> Grand Living Room </h2> 
+  <h3> The Central Reception and Assembly Hall </h3> 
+  <p> 
+    The Grand Living Room is designed in a spacious open-concept rectangular layout covering roughly 500 square meters at the heart of the main campus building. It features soaring 8-meter-high ceilings, floor-to-ceiling double-glazed glass windows that offer abundant natural light, and polished marble flooring inlaid with geometric brass accents. The room is outfitted with custom-upholstered sectional seating arrangements, handcrafted wooden coffee tables, integrated ambient LED cove lighting, and a central architectural fireplace. 
+  </p> 
+  <p> 
+    Serving as the primary formal gathering space for visiting dignitaries, staff gatherings, and relaxed executive discussions, the room balances high-end comfort with architectural grandeur. Complete with discrete multi-zone audio speakers and climate control vents seamlessly integrated into the crown molding, it provides a welcoming, versatile, and elegant environment for daily social interaction and large-scale campus events.
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Executive Culinary Kitchen.jpg" alt="Executive Culinary Kitchen"></center>
+  <h2> Executive Culinary Kitchen </h2> 
+  <h3> The High-Performance Dining Preparation Center </h3> 
+  <p> 
+    The Executive Culinary Kitchen is laid out in an efficient commercial-grade U-shape configuration covering approximately 250 square meters within the hospitality wing. It is constructed entirely with seamless stainless steel countertops, heavy-duty non-slip industrial flooring, and high-capacity ventilation hoods designed to manage intense cooking output. The facility is equipped with 4 multi-zone induction ranges, commercial refrigeration units, precision combi-ovens, and dedicated prep stations to support large-scale meal preparation. 
+  </p> 
+  <p> 
+    Functioning as the primary food preparation hub for executive dining and campus events, the kitchen handles daily meal service with strict adherence to hygiene and nutritional standards. Outfitted with independent water filtration systems and integrated waste management chutes, it provides a clean, fully optimized, and reliable workspace for professional culinary staff.
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Luxury Guest Suites.jpg" alt="Luxury Guest Suites"></center>
+  <h2> 10 Luxury Guest Suites </h2> 
+  <h3> The Refined Residential Quarters for Honored Visitors </h3> 
+  <p> 
+    The 10 Luxury Guest Suites occupy a sprawling 1,200-square-meter wing within the House of Eternal Stewardship (Luce), each designed with an expansive open-concept layout and private foyer. Structured with soundproofed double-partition walls and impact-resistant acoustic glass, these quarters ensure complete privacy and tranquility for visiting dignitaries. Each suite features custom mahogany furnishings, king-size platform beds, integrated climate control zones, and a dedicated en-suite marble bathroom equipped with rainfall showers and independent hydrotherapy tubs. High-speed encrypted data ports and concealed entertainment consoles are built directly into the architectural millwork.
+  </p> 
+  <p> 
+    Serving as exclusive private quarters for elite guests and high-ranking envoys, the suites blend uncompromised comfort with the austere architectural standards of the Red Marshal's domain. Each room is wired into Luce's central environmental grid, allowing personalized lighting and atmospheric adjustments while maintaining strict security oversight. These quarters offer a serene, fully equipped sanctuary where honored visitors can rest and prepare in absolute security.
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="The Estate Library & Map Room.jpg" alt="The Estate Library & Map Room"></center>
+  <h2> The Estate Library & Map Room </h2> 
+  <h3> The Archives of Sovereign Knowledge and Cartography </h3> 
+  <p> 
+    The Estate Library & Map Room spans a grand rectangular hall covering roughly 650 square meters within the House of Eternal Stewardship (Luce). It features soaring 10-meter-high vaulted ceilings, floor-to-ceiling dark oak bookshelves accessible via rolling brass ladders, and polished hardwood flooring inlaid with antique navigational compass designs. The center of the room houses four massive, flat-topped mahogany cartographic tables surrounded by specialized directional lighting and precision magnifying arrays. Integrated climate control systems maintain a constant 20 degrees Celsius and 45 percent humidity to preserve centuries-old texts, scrolls, and tactical charts.
+  </p> 
+  <p> 
+    Functioning as the primary repository for historical records, global surveys, and tactical cartography, the facility provides researchers and commanders with the raw intelligence needed for long-term dominion. Outfitted with private study carrels, secure reading desks, and direct access to Luce's archival database terminals, it stands as a quiet, scholarly sanctuary dedicated to preserving the accumulated knowledge of the Red Marshal's domain.
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Sub-Level Doomsday Vault.jpg" alt="Sub-Level Doomsday Vault"></center>
+  <h2> Sub-Level Doomsday Vault </h2> 
+  <h3> The Deep-Bunker Continuity Core and Emergency Escape Channels </h3> 
+  <p> 
+    Located 100 meters beneath the main foundation of the House of Eternal Stewardship (Luce), the Sub-Level Doomsday Vault is an autonomous, heavily fortified structure designed to ensure the survival of the Red Marshal's governance and lineage. The vault is constructed within a sphere of high-grade reinforced titanium and concrete, capable of withstanding direct kinetic and geological impacts. Access is restricted to a single, blast-proof elevator shaft and a secondary, spiral emergency staircase secured by multiple sequential iris-scan airlocks.
+  </p> 
+  <p> 
+    This self-contained core houses the estate’s critical continuity-of-operations systems: an independent micro-fission reactor, primary air and water filtration plants, a cryogenic genetic and data repository, and the central communications hub (connecting directly to the surface through shielded fiber optics). Surrounding the central core are eight hardened, high-security residential capsules for essential personnel.
+  </p> 
+  <p> 
+    In the event of a catastrophic breach of the Luce compound, the vault is engineered with two primary emergency escape channels. These are pressurized, high-speed subterranean transport tubes, shielded by 10 meters of earth and rock, which terminate at concealed, fortified surface bunkers located 5 kilometers distant in separate, secure sectors of the Marshal's territory. The entire facility is maintained at a constant 18 degrees Celsius and positive air pressure, ensuring total environmental isolation.
+  </p> 
+</div>
+
+<div class="section"> 
+  <center><img src="Living Room.jpg" alt="The Panorama Lounge & Media Sanctum"></center>
+  <h2> The Panorama Lounge & Media Sanctum </h2> 
+  <h3> The Vista-Facing Recreational and Entertainment Hub </h3> 
+  <p> 
+    The Panorama Lounge & Media Sanctum spans an expansive, open-plan recreational wing within the House of Eternal Stewardship (Luce), featuring sweeping curved glass walls that open directly onto panoramic coastal horizons. The space is anchored by warm acoustic wood-paneled bulkheads, deep-cushioned modular lounging upholstery, and bespoke multi-screen digital displays integrated seamlessly into the rich timber architectural framework. Soft ambient ceiling downlighting and low-profile recessed fixtures create a warm, immersive environment balanced against the natural glow of the sunset outside.
+  </p> 
+  <p> 
+    Designed as a versatile social and entertainment retreat for the Red Marshal's inner circle, the room combines high-definition multi-media infrastructure with supreme relaxation. Integrated workstations, distributed audio arrays, and expansive viewing panels allow for both high-level situational monitoring and quiet leisure, offering an unmatched sanctuary of comfort, style, and absolute dominion.
+  </p> 
+</div>
+
+<form class="super">
+  <center>
+    <h1>Explore More:</h1>
+    <a href="house.html" class="btn-special">1</a>
+    <a href="#" class="btn-special s">2</a>
+    <a href="more.html" class="btn-special">3</a><br>
+  </center>
+</form><br><br>
+
+<footer>
+	<p>© IDAI: Inspiring Trust Through Innovation. All rights reserved.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
